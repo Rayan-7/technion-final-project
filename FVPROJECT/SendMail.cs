@@ -26,7 +26,7 @@ namespace FVPROJECT
             {
                 MailMessage mail = new MailMessage();
                 SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
-                mail.From = new MailAddress("ryosofts7@gmail.com");
+                mail.From = new MailAddress("האימל שלך");
                 mail.To.Add(supplier.Email);
                 mail.Body = "Hi " + supplier.ContactName + ",\n I want to order from you \n";
                 foreach (string productId in products)
@@ -40,7 +40,7 @@ namespace FVPROJECT
                         "thanks";
                 }
                 SmtpServer.Port = 587;
-                SmtpServer.Credentials = new System.Net.NetworkCredential("ryosofts7@gmail.com", "Ryo12345678");
+                SmtpServer.Credentials = new System.Net.NetworkCredential("האימל שלך", "הסיסמא שלך");
                 SmtpServer.EnableSsl = true;
                 SmtpServer.Send(mail);
                 return true;
@@ -56,7 +56,7 @@ namespace FVPROJECT
             {
                 MailMessage mail = new MailMessage();
                 SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
-                mail.From = new MailAddress("ryosofts7@gmail.com");
+                mail.From = new MailAddress("האימל שלך");
                 mail.To.Add(client.Email);
                 mail.Subject = "Thank you for buying from us";
                 mail.Body = "Dear " + client.Name + "\n We have sent you a receipt for your purchase from us\n";
@@ -82,12 +82,12 @@ namespace FVPROJECT
             {
                 MailMessage mail = new MailMessage();
                 SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
-                mail.From = new MailAddress("ryosofts7@gmail.com");
+                mail.From = new MailAddress("האימל שלך");
                 mail.To.Add(email);
                 mail.Subject = "Rest your Password " + password;
                 mail.Body = "Your initial password is :" + password + " you must change this password after you signin\n";
                 SmtpServer.Port = 587;
-                SmtpServer.Credentials = new System.Net.NetworkCredential("ryosofts7@gmail.com", "Ryo12345678");
+                SmtpServer.Credentials = new System.Net.NetworkCredential("האימל שלך", "הסיסמא שלך");
                 SmtpServer.EnableSsl = true;
                 SmtpServer.Send(mail);
                 return true;
@@ -116,7 +116,7 @@ namespace FVPROJECT
                 MailMessage mail = new MailMessage();
                 SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
 
-                mail.From = new MailAddress("ryosofts7@gmail.com");
+                mail.From = new MailAddress("האימל שלך");
                 mail.To.Add(manager.Email);
                 mail.Subject = "RyoSofts Account Activation";
                 mail.Body = "Dear " + manager.Name + "\n We’re so glad that you’ve joined our community! \n" +
@@ -124,7 +124,7 @@ namespace FVPROJECT
                     "UserName:" + manager.UserName + "\n" +
                     "Your initial password is :" + password + " you must change this password after you signin";
                 SmtpServer.Port = 587;
-                SmtpServer.Credentials = new System.Net.NetworkCredential("ryosofts7@gmail.com", "Ryo12345678");
+                SmtpServer.Credentials = new System.Net.NetworkCredential("האימל שלך", "הסיסמא שלך");
                 SmtpServer.EnableSsl = true;
                 SmtpServer.Send(mail);
                 return true;
@@ -141,7 +141,7 @@ namespace FVPROJECT
                 MailMessage mail = new MailMessage();
                 SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
 
-                mail.From = new MailAddress("ryosofts7@gmail.com");
+                mail.From = new MailAddress("האימל שלך");
                 mail.To.Add(seller.Email);
                 mail.Subject = "RyoSofts Account Activation";
                 mail.Body = "Dear " + seller.Name + "\n We’re so glad that you’ve joined our community! \n" +
@@ -149,7 +149,7 @@ namespace FVPROJECT
                     "UserName:" + seller.UserName + "\n" +
                     "Your initial password is :" + password + " you must change this password after you signin";
                 SmtpServer.Port = 587;
-                SmtpServer.Credentials = new System.Net.NetworkCredential("ryosofts7@gmail.com", "ryo123456");
+                SmtpServer.Credentials = new System.Net.NetworkCredential("האימל שלך", "הסיסמא שלך");
                 SmtpServer.EnableSsl = true;
                 SmtpServer.Send(mail);
                 return true;
@@ -165,13 +165,13 @@ namespace FVPROJECT
             {
                 MailMessage mail = new MailMessage();
                 SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
-                mail.From = new MailAddress("ryosofts7@gmail.com");
+                mail.From = new MailAddress("האימל שלך");
                 System.Net.Mail.Attachment attachment;
                 mail.To.Add(email);
                 mail.Subject = "Employees Works Hours";
                 mail.Body = "Hi,\n I have attached to you the working hours of my employees\n";
                 SmtpServer.Port = 587;
-                SmtpServer.Credentials = new System.Net.NetworkCredential("ryosofts7@gmail.com", "Ryo12345678");
+                SmtpServer.Credentials = new System.Net.NetworkCredential("האימל שלך", "הסיסמא שלך");
                 SmtpServer.EnableSsl = true;
                 string savepath = System.IO.Path.Combine(Directory.GetParent(Environment.CurrentDirectory).Parent.FullName, "WorkingHours",
                 seller.IdNumber + "-" + seller.Name + "-" + date + ".xlsx");
@@ -191,13 +191,13 @@ namespace FVPROJECT
             {
                     MailMessage mail = new MailMessage();
                     SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
-                    mail.From = new MailAddress("ryosofts7@gmail.com");
+                    mail.From = new MailAddress("האימל שלך");
                     System.Net.Mail.Attachment attachment;
                     mail.To.Add(email);
                     mail.Subject = "Employees Works Hours";
                     mail.Body = "Hi,\n I have attached to you the working hours of my employees\n";
                     SmtpServer.Port = 587;
-                    SmtpServer.Credentials = new System.Net.NetworkCredential("ryosofts7@gmail.com", "Ryo12345678");
+                    SmtpServer.Credentials = new System.Net.NetworkCredential("האימל שלך", "הסיסמא שלך");
                     SmtpServer.EnableSsl = true;
                 foreach (FileInfo file in files)
                 {
@@ -234,14 +234,14 @@ namespace FVPROJECT
                 MailMessage mail = new MailMessage();
                 SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
 
-                mail.From = new MailAddress("ryosofts7@gmail.com");
+                mail.From = new MailAddress("האימל שלך");
                 mail.To.Add(manager.Email);
                 mail.Subject = "Account details Updated";
                 mail.Body = "Dear " + manager.Name + "\n  We wanted to let you know that some changes have been made to your details \n" +
                     "RyoSofts Email: " + manager.Email + "\n" +
                     "UserName:" + manager.UserName + "\n";
                 SmtpServer.Port = 587;
-                SmtpServer.Credentials = new System.Net.NetworkCredential("ryosofts7@gmail.com", "ryo123456");
+                SmtpServer.Credentials = new System.Net.NetworkCredential("האימל שלך", "הסיסמא שלך");
                 SmtpServer.EnableSsl = true;
 
                 SmtpServer.Send(mail);
@@ -260,7 +260,7 @@ namespace FVPROJECT
                 MailMessage mail = new MailMessage();
                 SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
 
-                mail.From = new MailAddress("ryosofts7@gmail.com");
+                mail.From = new MailAddress("האימל שלך");
                 mail.To.Add(seller.Email);
                 mail.Subject = "Account details Updated";
                 mail.Body = "Dear " + seller.Name + "\n We wanted to let you know that some changes have been made to your details \n" +
@@ -268,7 +268,7 @@ namespace FVPROJECT
                     "UserName:" + seller.UserName + "\n";
 
                 SmtpServer.Port = 587;
-                SmtpServer.Credentials = new System.Net.NetworkCredential("ryosofts7@gmail.com", "ryo123456");
+                SmtpServer.Credentials = new System.Net.NetworkCredential("האימל שלך", "הסיסמא שלך");
                 SmtpServer.EnableSsl = true;
 
                 SmtpServer.Send(mail);
